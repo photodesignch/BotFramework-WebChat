@@ -150,6 +150,25 @@ export var adaptive_cardsFn = function (json: any) {
     return acMessage;
 }
 
+var imback_postback_attach: dl.HeroCard = {
+    contentType: "application/vnd.microsoft.card.hero",
+    content: {
+        title: "Test imBack vs postBack",
+        buttons: [
+            {
+                type: "imBack",
+                title: "imBack Button",
+                value: "imBack clicked"
+            },
+            {
+                type: "postBack",
+                title: "postBack Button",
+                value: "postBack clicked"
+            }
+        ]
+    }
+}
+
 export var car_card: dl.Message = {
     type: "message",
     from: bot,
@@ -356,4 +375,14 @@ export var video_card: dl.Message = {
             }
         }
     ]
+}
+
+export var imback_postback: dl.Message = {
+    type: "message",
+    from: bot,
+    timestamp: new Date().toUTCString(),
+    channelId: "webchat",
+    text: "",
+    attachmentLayout: "carousel",
+    attachments: [imback_postback_attach]
 }
