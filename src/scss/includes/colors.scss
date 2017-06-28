@@ -13,6 +13,11 @@ $c10: #dbdee1;
 $c11: #d2dde5;
 $c12: #ffa333;
 
+$c13: #F2F2F2;
+$c14: #e6e6e6;
+$c15: #767676;
+$c16: #e8e8e8;
+
 $c_brand: $c07;
 $c_shadow: $c02;
 $c_chrome: $c10;
@@ -20,4 +25,10 @@ $c_textHeading: $c08;
 $c_textLight: $c04;
 
 $c_messageFromMe: $c07;
-$c_messageFromThem: $c09;
+$c_messageFromThem: $c01;
+$c_inputBoxShadow: 0 0 2px 0 rgba(0,0,0,0.04), 0 2px 2px 0 rgba(0,0,0,0.06);
+
+$c_console_border_top: $c16;
+
+$c_scrollbar_background: $c14;
+$c_scrollbar_thumb: $c15;

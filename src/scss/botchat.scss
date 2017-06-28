@@ -48,6 +48,8 @@
         right: 0;
         top: 0;
         z-index: 1;
+        // determine by state.format.strings.options.showHeader
+        display: none;
     }
 
     .wc-time {
@@ -64,8 +66,10 @@
         padding: 10px;
         position: absolute;
         right: 0;
-        top: $headerTotalHeight;
+        // top: $headerTotalHeight;
+        top: 0;
         transition: transform $actionTransition;
+        background-color: $c13;
     }
 
     .wc-message-group-content {
@@ -162,7 +166,8 @@
     }
 
     .wc-console {
-        border: 5px solid $c_chrome;
+        border-top: 2px solid $c_console_border_top;
+        box-shadow: $c_inputBoxShadow;
         bottom: 0;
         box-sizing: border-box;
         height: $consoleHeight;
@@ -226,7 +231,6 @@
 
     .wc-message-content {
         border-radius: 2px;
-        box-shadow: 0px 1px 1px 0px $c_shadow;
         padding: 8px;
         word-break: break-word;
       }
@@ -394,7 +398,7 @@
 /* alternate chat sizes */
 
     .wc-message {
-        max-width: 91%;
+        max-width: 72%;
     }
 
     @include card-size($card_normal);
@@ -542,7 +546,6 @@
 
     .wc-message-from-bot {
         float: left;
-        margin-left: 8px;
     }
 
     .wc-message-from-bot .wc-message-content {
@@ -560,6 +563,12 @@
 
     .wc-message-from-bot svg.wc-message-callout {
         left: -6px;
+    }
+
+    .wc-message-from-me .wc-message-content,
+    .wc-message-from-bot .wc-message-content
+    {
+        padding: 8px 16px 8px 16px;
     }
 
 /* console */
@@ -588,16 +597,18 @@
         padding: 0;
         resize: none;
         width: 100%;
+        font-size: $inputFontSize;
     }
 
-    .wc-send svg {
-        height: 18px;
-        width: 27px;
+    .wc-send svg,
+    {
+        width: 31px;
+        margin-top: 16px;
     }
 
     .wc-upload svg {
-        height: 18px;
         width: 26px;
+        margin-top: 16px;
     }
 
     #wc-upload-input {
@@ -606,8 +617,7 @@
 
     .wc-textbox {
         bottom: 0;
-        left: 48px;
-        right: 49px;
+        left: 50px;
     }
 
     .wc-send {
@@ -673,11 +683,10 @@
         width: 8px;
     }
 
-    .wc-app ::-webkit-scrollbar * {
-        background-color: transparent;
+    .wc-app ::-webkit-scrollbar-track {
+        background-color: $c_scrollbar_background;
     }
 
     .wc-app ::-webkit-scrollbar-thumb {
-        background-color: $c_chrome;
+        background-color: $c_scrollbar_thumb;
     }
-    
