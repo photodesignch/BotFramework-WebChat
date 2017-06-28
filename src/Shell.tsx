@@ -52,8 +52,8 @@ class ShellContainer extends React.Component<Props, {}> {
             <div className={className}>
                 <input id="wc-upload-input" type="file" ref={ input => this.fileInput = input } multiple onChange={ () => this.onChangeFile() } />
                 <label className="wc-upload" htmlFor="wc-upload-input">
-                    <svg>
-                        <path d="M19.96 4.79m-2 0a2 2 0 0 1 4 0 2 2 0 0 1-4 0zM8.32 4.19L2.5 15.53 22.45 15.53 17.46 8.56 14.42 11.18 8.32 4.19ZM1.04 1L1.04 17 24.96 17 24.96 1 1.04 1ZM1.03 0L24.96 0C25.54 0 26 0.45 26 0.99L26 17.01C26 17.55 25.53 18 24.96 18L1.03 18C0.46 18 0 17.55 0 17.01L0 0.99C0 0.45 0.47 0 1.03 0Z" />
+                    <svg viewBox="0 0 15 12.01">
+                        <path d="M12,0V9H0V0ZM.75.75v4L3.38,2.1,7.13,5.85l1.5-1.5L11.25,7V.75Zm0,7.5H8.47L3.38,3.15.75,5.78Zm10.5,0V8L8.63,5.4l-1,1L9.53,8.25ZM9.38,3a.37.37,0,0,1-.26-.64.37.37,0,1,1,.53.53A.36.36,0,0,1,9.38,3Z" />
                     </svg>
                 </label>
                 <div className="wc-textbox">
@@ -69,8 +69,8 @@ class ShellContainer extends React.Component<Props, {}> {
                     />
                 </div>
                 <label className="wc-send" onClick={ () => this.onClickSend() } >
-                    <svg>
-                        <path d="M26.79 9.38A0.31 0.31 0 0 0 26.79 8.79L0.41 0.02C0.36 0 0.34 0 0.32 0 0.14 0 0 0.13 0 0.29 0 0.33 0.01 0.37 0.03 0.41L3.44 9.08 0.03 17.76A0.29 0.29 0 0 0 0.01 17.8 0.28 0.28 0 0 0 0.01 17.86C0.01 18.02 0.14 18.16 0.3 18.16A0.3 0.3 0 0 0 0.41 18.14L26.79 9.38ZM0.81 0.79L24.84 8.79 3.98 8.79 0.81 0.79ZM3.98 9.37L24.84 9.37 0.81 17.37 3.98 9.37Z" />
+                    <svg viewBox="0 0 15 12.01">
+                        <path d="M0 7.93L1.32 4 0 0l11.9 4zm2-4.34h6.41L1.18 1.18zm-.8 3.16l7.21-2.41H2z" />
                     </svg>
                 </label>
             </div>
